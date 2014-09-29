@@ -4,18 +4,9 @@
 
 import decimal
 
+def str_to_bool(INTERVAL, RATE = None, TOTAL = None, PRINCIPAL, DURATION, PREQUALIFICATION):
+    """calculator function rewritten. """
 
-# Your functions should not take string representations of these values
-# Delete these lines when function conversion is complete
-PSTR = raw_input('What is the amount of your principal?: ')
-DSTR = raw_input('For how many years is this loan being borrowed?: ')
-QSTR = raw_input('Are you prequalified for this loan?: ')
-
-# Function arguments should not need the following three transformations
-# Delete these lines when function conversion is complete
-PRINCIPAL = int(PSTR)
-DURATION = int(DSTR)
-PREQUALIFICATION = True if QSTR.lower()[0] == 'y' else False
 
 # Function conversion work you do should start here
 INTERVAL = 12
@@ -64,3 +55,5 @@ if RATE is not None:
     RATE = decimal.Decimal(R)
     TOTAL = PRINCIPAL * ((1 + RATE / INTERVAL) ** (INTERVAL * DURATION))
     TOTAL = int(round(TOTAL))
+
+
